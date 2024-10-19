@@ -2,12 +2,16 @@ import React from 'react'
 
 const Signup = () => {
   return (
-    <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
+    <div className='d-flex justify-content-center align-items-center bg-secondary vh-100'>
     <div className='bg-white p-3 rounded w-25'>
       <form action="">
           <div className='mb-3'>
            <label htmlFor='username'><strong>Name</strong></label>
            <input type='text' placeholder='Enter Name' className='form-control rounded-0' />
+          </div>
+          <div className='mb-3'>
+              <label htmlFor='Email'><strong>Email</strong></label>
+              <input type='Email' placeholder='Enter Email' className='form-control rounded-0'/>
           </div>
           <div className='mb-3'>
               <label htmlFor='password'><strong>Password</strong></label>
