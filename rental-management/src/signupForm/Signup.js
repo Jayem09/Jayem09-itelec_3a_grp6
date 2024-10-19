@@ -4,6 +4,7 @@ const Signup = () => {
   return (
     <div className='d-flex justify-content-center align-items-center bg-secondary vh-100'>
     <div className='bg-white p-3 rounded w-25'>
+      <p className='fw-bold justify-content-center align-center-center d-flex fs-1'>Sign-Up</p>
       <form action="">
           <div className='mb-3'>
            <label htmlFor='username'><strong>Name</strong></label>
@@ -13,7 +14,7 @@ const Signup = () => {
               <label htmlFor='Email'><strong>Email</strong></label>
               <input type='Email' placeholder='Enter Email' className='form-control rounded-0'/>
           </div>
-          <div className='mb-3'>
+          <div className='mb-5 '>
               <label htmlFor='password'><strong>Password</strong></label>
               <input type='password' placeholder='Enter password' className='form-control rounded-0'/>
           </div>
