@@ -10,7 +10,7 @@ const Signup = () => {
     password: ''
   });
   
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [error, setError] = useState({});
 
   const handleInput = (event) => {
@@ -23,7 +23,7 @@ const Signup = () => {
     if(error.name === "" && error.username === "" && error.password === ""){
       axios.post('http://localhost:8081/signup', values)
       .then(res => {
-        navigate('/')
+        navigate('/');
     })
       .catch(err => console.log(err))
     }
