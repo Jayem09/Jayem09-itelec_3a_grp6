@@ -1,31 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react';
+import validation from '../validations/signupValidation';
 
 const Signup = () => {
+  const [values, setValues] = useState({
+    name: '',
+    username: '',
+    password: ''
+  });
+  
+  const [error, setError] = useState({});
+
+  const handleInput = (event) => {
+    setValues(prev => ({...prev, [event.target.name]: event.target.value}));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setError(validation(values));
+  };
+
   return (
     <div className='d-flex justify-content-center align-items-center bg-secondary vh-100'>
-    <div className='bg-white p-3 rounded w-25'>
-      <p className='fw-bold justify-content-center align-center-center d-flex fs-1'>Sign-Up</p>
-      <form action="">
+      <div className='bg-white p-3 rounded w-25'>
+        <p className='fw-bold justify-content-center align-center-center d-flex fs-1'>Sign-Up</p>
+        <form action="" onSubmit={handleSubmit}>
           <div className='mb-3'>
-           <label htmlFor='username'><strong>Name</strong></label>
-           <input type='text' placeholder='Enter Name' className='form-control rounded-0' />
+            <label htmlFor='name'><strong>Name</strong></label>
+            <input type='text' placeholder='Enter Name' 
+            onChange={handleInput} className='form-control rounded-0' name='name'  />
+             {error.name && <span className='text-danger'>{error.name}</span>}
           </div>
           <div className='mb-3'>
-              <label htmlFor='Email'><strong>Email</strong></label>
-              <input type='Email' placeholder='Enter Email' className='form-control rounded-0'/>
+            <label htmlFor='username'><strong>Username</strong></label>
+            <input type='text' placeholder='Enter Username'
+               onChange={handleInput}  className='form-control rounded-0' name='username'/>
+                {error.username && <span className='text-danger'>{error.username}</span>}
           </div>
-          <div className='mb-5 '>
-              <label htmlFor='password'><strong>Password</strong></label>
-              <input type='password' placeholder='Enter password' className='form-control rounded-0'/>
+          <div className='mb-5 '>s
+            <label htmlFor='password'><strong>Password</strong></label>
+            <input type='password' placeholder='Enter password'
+              onChange={handleInput}  className='form-control rounded-0' name='password' />
+               {error.password && <span className='text-danger'>{error.password}</span>}
+        
           </div>
 
-          <button className='btn btn-success w-100 rounded-0'><strong>Login</strong></button>
+          <button className='btn btn-success w-100 rounded-0 mb-2' onClick={handleSubmit}><strong>Sign Up</strong></button>
           <p className='justify-content-center align-items-center d-flex'>You are agree to our terms and policies</p>
-          <button className='btn btn-default border w-100 bg-light rounded-0'>Create Account</button>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;
