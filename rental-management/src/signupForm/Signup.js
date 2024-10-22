@@ -55,6 +55,7 @@ const Signup = () => {
           </div>
 
           <button className='btn btn-success w-100 rounded-0 mb-2' onClick={handleSubmit}><strong>Sign Up</strong></button>
+          <button className="btn btn-danger w-100 rounded-0 mb-5 " onClick={handleSubmit}>Go to Login<button/>
           <p className='justify-content-center align-items-center d-flex'>You are agree to our terms and policies</p>
         </form>
       </div>
