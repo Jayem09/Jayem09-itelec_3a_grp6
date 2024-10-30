@@ -2,7 +2,8 @@ function validation(values) {
     let error = {};
   
     const usernamePattern = /^[a-zA-Z0-9_]{3,16}$/;
-    
+    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*)(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+
   
     if (values.username === "") {
       error.username = "Username should not be empty";
