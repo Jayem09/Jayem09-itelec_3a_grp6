@@ -18,7 +18,7 @@ const Signup = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault();     
     const validationErrors = validation(values);
     setError(validationErrors);
 
