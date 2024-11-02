@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #af9a7d;
+  --primaryColor: #a67272;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
@@ -22,7 +22,7 @@ body {
   padding-top: 66px;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: "Poppins", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.4;
 }
 h1 {
@@ -91,6 +91,7 @@ h6 {
 /* end of globals */
 /* Navbar */
 .navbar {
+  margin-top: -65px;
   position: fixed;
   top: 0;
   left: 0;
@@ -101,6 +102,7 @@ h6 {
 }
 .nav-header {
   display: flex;
+  margin-left: -700px;
   justify-content: space-between;
 }
 .nav-btn {
@@ -124,14 +126,15 @@ h6 {
   text-decoration: none;
   padding: 1rem 0;
   color: var(--mainBlack);
+  font: poppins;
   transition: var(--mainTransition);
   text-align: center;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 600;
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
-  color: var(--mainBlack);
+  color: var(--primaryColor);
 }
 
 .show-nav {
