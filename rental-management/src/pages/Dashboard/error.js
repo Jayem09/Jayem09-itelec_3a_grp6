@@ -5,3 +5,4 @@ export default function error() {
     <div>Hello from erro page</div>
   )
 }
+    

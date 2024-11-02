@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class roomSingle extends Component {
-  render() {
-    return (
-      <div>hello from singleroom page</div>
-    )
-  }
+function roomSingle() {
+  return (
+    <div>roomSingle</div>
+  )
 }
+
+export default roomSingle

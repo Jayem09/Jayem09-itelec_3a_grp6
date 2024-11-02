@@ -1,24 +1,29 @@
-import React from 'react';
-import Login from './loginForm/Login';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Signup from './signupForm/Signup';
-import Dashboard from './Dashboard/dashboard';
-import home from './pages/Dashboard/home';
-import error from './pages/Dashboard/error';
-import rooms from './pages/Dashboard/rooms';
-import roomSingleHome from './pages/Dashboard/roomSingle';
+import React from "react";
+import Login from "./pages/loginForm/Login";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Signup from "./pages/signupForm/Signup";
+import Dashboard from "./pages/Dashboard/dashboard";
+import Home from "./pages/Dashboard/home";
+import Error from "./pages/Dashboard/error";
+import Rooms from "./pages/Dashboard/rooms";
+import RoomSingle from "./pages/Dashboard/roomSingle";
+import NavBar from "./components/navBar";
 
 function App() {
   return (
-    <BrowserRouter> 
+    <BrowserRouter>
+      <NavBar />
       <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/Signup' element={<Signup/> } /> 
-        <Route path='/Dashboard' element={<Dashboard />} />
-        <Route path='/Login>' element={<Login/>} />
+        {/* <Route path='/' element={<Login />} /> */}
+        {/* <Route path='/login' element={<Login />} /> */}
+        {/* <Route path='/signup' element={<Signup />} /> */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/error" element={<Error />} />
+        <Route path="/rooms" element={<Rooms />} />
+        <Route path="/rooms/:single" element={<RoomSingle />} />
       </Routes>
     </BrowserRouter>
- 
   );
 }
 
