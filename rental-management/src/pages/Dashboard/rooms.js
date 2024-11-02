@@ -1,9 +1,7 @@
-import React from 'react'
-
+import React from "react";
+import Hero from "../../components/Hero";
 function rooms() {
-  return (
-    <div>rooms</div>
-  )
+  return <Hero hero="roomsHero" />;
 }
 
-export default rooms
+export default rooms;
