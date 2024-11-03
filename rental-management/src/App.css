@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #a67272;
+  --primaryColor: #f50505;
   --mainWhite: #fff;
-  --offWhite: #f7f7f7;
+  --offWhite: #ebe9e9;
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
@@ -91,7 +91,7 @@ h6 {
 /* end of globals */
 /* Navbar */
 .navbar {
-  margin-top: -60px;
+  margin-top: -70px;
   position: fixed;
   top: 0;
   left: 0;
@@ -163,7 +163,7 @@ h6 {
 /* Hero */
 .defaultHero,
 .roomsHero {
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 73px);
   background: url("./images/herobg.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -171,7 +171,7 @@ h6 {
 }
 .roomsHero {
   background-image: url("./images/room-2.jpeg");
-  min-height: 60vh;
+  min-height: 70vh;
 }
 /* End of Hero */
 /* Banner */
